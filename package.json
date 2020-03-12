@@ -1,7 +1,7 @@
 {
   "name": "ledgy-pricing",
   "version": "1.0.0",
-  "description": "",
+  "description": "A component with information for company pricing at Ledgy",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,7 +17,8 @@
   "license": "MIT",
   "peerDependencies": {
     "react": "16.13.0",
-    "react-dom": "16.13.0"
+    "react-dom": "16.13.0",
+    "bootstrap": "4.4.1"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
@@ -40,7 +41,12 @@
     "style-loader": "1.1.3",
     "webpack": "4.42.0",
     "webpack-cli": "3.3.11",
-    "webpack-dev-server": "3.10.3"
+    "webpack-dev-server": "3.10.3",
+    "bootstrap": "4.4.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "file-loader": "5.1.0",
+    "node-sass": "4.13.1",
+    "sass-loader": "8.0.2"
+  }
 }

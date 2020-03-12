@@ -1,0 +1,83 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+html, body {
+  hyphens: auto;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Helvetica", sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+// Colors
+$deep-blue:                       #1e2b46;
+$energetic-blue:                  #43aadc;
+$vibrant-green:                   #1edeb7;
+$highlight-red:                   #e64c49;
+$pale-energetic-blue:             #eaf5fa;
+
+$gray-100: #f8f9fadf;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+$theme-colors: (
+  "blue": $deep-blue,
+  "energetic-blue": $energetic-blue,
+  "green": $vibrant-green,
+  "red": $highlight-red,
+  "pale-energetic-blue": $pale-energetic-blue,
+  "primary": $deep-blue,
+  "secondary": $pale-energetic-blue,
+  "info": $energetic-blue,
+  "success": $vibrant-green,
+  "danger": $highlight-red,
+  "gray-neutral": $gray-500
+);
+
+@mixin pricing-border {
+  border: 2px solid;
+  border-color: $gray-200;
+  border-radius: $border-radius * 5;
+}
+
+.pricing-col {
+  flex: 1;
+  @include media-breakpoint-down(md) {
+    &:nth-of-type(1) {
+      flex: 4;
+    }
+    &:nth-of-type(2) {
+      flex: 3;
+    }
+  }
+  margin: 0 0.5rem;
+  overflow-x: scroll;
+  &:not(:first-of-type) {
+    @include pricing-border;
+  }
+  .pricing-col-children {
+    height: 35px;
+  }
+}
+.pricing-col.border-energetic-blue {
+  border: 4px solid;
+}
+
+.pricing-plan {
+  height: 210px;
+  &.Premium { // will be renamed to Scaleup
+    height: 250px;
+  }
+  &.Enterprise {
+    height: 300px;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 300px !important;
+  }
+}
