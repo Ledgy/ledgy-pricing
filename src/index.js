@@ -16,7 +16,7 @@ const STARTUP = 'Startup';
 const SCALEUP = 'Scaleup';
 const ENTERPRISE = 'Enterprise';
 
-export const TheComp = ({ startupButton, scaleupButton, enterpriseButton }) => {
+export const LedgyPricing = ({ startupButton, scaleupButton, enterpriseButton }) => {
   const TextCol = ({ name = '' }) => (
     <PricingCol textLeft name={name}>
       {featurePricing.map(({ text = true }, i) => (

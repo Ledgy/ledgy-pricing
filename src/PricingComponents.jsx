@@ -20,12 +20,12 @@ export const PricingCol = ({
     }`}
   >
     <div
-      className={`pricing-plan ${name} p-1 d-flex flex-column justify-content-end align-items-center`}
+      className={`pricing-plan ${name}`}
     >
       {icon && name && price && (
         <React.Fragment>
           <img src={icon} width={iconWidth} alt="" />
-          <h3 className="py-2 mt-1">{name}</h3>
+          <h3 className="pricing-plan-name">{name}</h3>
           <div className="text-wrap">{price}</div>
         </React.Fragment>
       )}
@@ -35,7 +35,7 @@ export const PricingCol = ({
 );
 
 export const PricingColChildren = ({ prop }) => (
-  <div className="d-block p-1 pricing-col-children">
+  <div className="pricing-col-children">
     {(typeof prop !== 'boolean' && prop) || (!prop && Times) || (Check)}
   </div>
 );
@@ -46,7 +46,7 @@ export const PricingRow = ({
   marginBottom = false,
 }) => (
   <div
-    className={`row text-nowrap ${mobileView ? 'd-flex d-lg-none' : 'd-none d-lg-flex'} ${
+    className={`row text-nowrap ${mobileView ? 'mobile-pricing' : 'desktop-pricing'} ${
       marginBottom ? 'mb-4' : ''
     }`}
   >

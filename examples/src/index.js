@@ -2,10 +2,10 @@
 
 import React from 'react';
 import { render } from 'react-dom';
-import { TheComp } from '../../src';
+import { LedgyPricing } from '../../src';
 
 const App = () => (
-  <TheComp />
+  <LedgyPricing />
 );
 
 render(<App />, document.getElementById('root'));
