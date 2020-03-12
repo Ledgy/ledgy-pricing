@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TheComp = undefined;
+exports.LedgyPricing = undefined;
 
 var _react = require('react');
 
@@ -37,7 +37,7 @@ var STARTUP = 'Startup';
 var SCALEUP = 'Scaleup';
 var ENTERPRISE = 'Enterprise';
 
-var TheComp = exports.TheComp = function TheComp(_ref) {
+var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
   var startupButton = _ref.startupButton,
       scaleupButton = _ref.scaleupButton,
       enterpriseButton = _ref.enterpriseButton;
