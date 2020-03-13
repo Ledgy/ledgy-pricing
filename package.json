@@ -11,9 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "ovcOS"
+    "url": "https://github.com/Ledgy/ledgy-pricing"
   },
-  "author": "ovcOS",
+  "author": "Ledgy",
   "license": "MIT",
   "peerDependencies": {
     "react": "16.13.0",
