@@ -40,7 +40,11 @@ var ENTERPRISE = 'Enterprise';
 var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
   var startupButton = _ref.startupButton,
       scaleupButton = _ref.scaleupButton,
-      enterpriseButton = _ref.enterpriseButton;
+      enterpriseButton = _ref.enterpriseButton,
+      _ref$highlightScaleup = _ref.highlightScaleup,
+      highlightScaleup = _ref$highlightScaleup === undefined ? false : _ref$highlightScaleup,
+      _ref$highlightEnterpr = _ref.highlightEnterprise,
+      highlightEnterprise = _ref$highlightEnterpr === undefined ? false : _ref$highlightEnterpr;
 
   var TextCol = function TextCol(_ref2) {
     var _ref2$name = _ref2.name,
@@ -78,6 +82,7 @@ var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
   var ScaleupCol = _react2.default.createElement(
     _PricingComponents.PricingCol,
     {
+      highlight: highlightScaleup,
       icon: _scaleupIcon2.default,
       iconWidth: 180,
       name: SCALEUP,
@@ -102,7 +107,7 @@ var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
   var EnterpriseCol = _react2.default.createElement(
     _PricingComponents.PricingCol,
     {
-      highlight: true,
+      highlight: highlightEnterprise,
       icon: _enterpriseIcon2.default,
       iconWidth: 180,
       name: ENTERPRISE,
