@@ -16,7 +16,13 @@ const STARTUP = 'Startup';
 const SCALEUP = 'Scaleup';
 const ENTERPRISE = 'Enterprise';
 
-export const LedgyPricing = ({ startupButton, scaleupButton, enterpriseButton }) => {
+export const LedgyPricing = ({
+  startupButton,
+  scaleupButton,
+  enterpriseButton,
+  highlightScaleup = false,
+  highlightEnterprise = false,
+}) => {
   const TextCol = ({ name = '' }) => (
     <PricingCol textLeft name={name}>
       {featurePricing.map(({ text = true }, i) => (
@@ -43,6 +49,7 @@ export const LedgyPricing = ({ startupButton, scaleupButton, enterpriseButton })
 
   const ScaleupCol = (
     <PricingCol
+      highlight={highlightScaleup}
       icon={scaleupIcon}
       iconWidth={180}
       name={SCALEUP}
@@ -64,7 +71,7 @@ export const LedgyPricing = ({ startupButton, scaleupButton, enterpriseButton })
 
   const EnterpriseCol = (
     <PricingCol
-      highlight
+      highlight={highlightEnterprise}
       icon={enterpriseIcon}
       iconWidth={180}
       name={ENTERPRISE}
