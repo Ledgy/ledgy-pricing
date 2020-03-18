@@ -3,7 +3,7 @@ export const getCompanyFeaturePricing = () => [
   { text: 'Cap table' },
   { text: 'Basic reporting' },
   { text: 'Basic modeling' },
-  { text: 'Branded reporting', startup: false },
+  { text: 'Branded reporting', startup: false, scaleup: false },
   { text: 'Advanced modeling', startup: false },
   { text: 'Equity plans', startup: false },
   { text: 'Employee dashboard', startup: false, scaleup: false },
@@ -35,16 +35,12 @@ export const getCompanyFeaturePricing = () => [
   { text: 'Onboarding data audit', startup: false, scaleup: false },
   { text: 'Dedicated account manager', startup: false, scaleup: false },
   { text: 'SLA', startup: false, scaleup: false },
+  { text: 'Standard e-signatures', startup: false },
+  { text: 'Qualified e-signatures', startup: false },
   {
     text: 'Document templating',
     startup: false,
     scaleup: false,
-    enterprise: 'Coming soon',
-  },
-  {
-    text: 'Electronic signatures',
-    startup: false,
-    scaleup: 'Coming soon',
     enterprise: 'Coming soon',
   },
 ];

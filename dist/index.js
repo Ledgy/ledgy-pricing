@@ -111,7 +111,7 @@ var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
       icon: _enterpriseIcon2.default,
       iconWidth: 180,
       name: ENTERPRISE,
-      price: 'contact us'
+      price: 'Contact us'
     },
     featurePricing.map(function (_ref6, i) {
       var _ref6$enterprise = _ref6.enterprise,

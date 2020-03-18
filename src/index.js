@@ -77,7 +77,7 @@ export const LedgyPricing = ({
       icon={enterpriseIcon}
       iconWidth={180}
       name={ENTERPRISE}
-      price="contact us"
+      price="Contact us"
     >
       {featurePricing.map(({ enterprise = true }, i) => (
         <PricingColChildren prop={enterprise} key={i + 300} />
