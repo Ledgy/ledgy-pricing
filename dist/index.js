@@ -64,18 +64,18 @@ var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
       featurePricing.map(function (_ref4, i) {
         var _ref4$text = _ref4.text,
             text = _ref4$text === undefined ? true : _ref4$text;
-        return _react2.default.createElement(_PricingComponents.PricingColChildren, { prop: text, key: i });
+        return _react2.default.createElement(_PricingComponents.PricingColChildren, { prop: text, key: i, DynamicTrans: DynamicTrans });
       })
     );
   };
 
   var StartupCol = _react2.default.createElement(
     _PricingComponents.PricingCol,
-    { icon: _startupIcon2.default, iconWidth: 80, name: STARTUP, price: t('Free') },
+    { icon: _startupIcon2.default, iconWidth: 80, name: STARTUP, price: t('Free'), DynamicTrans: DynamicTrans },
     featurePricing.map(function (_ref5, i) {
       var _ref5$startup = _ref5.startup,
           startup = _ref5$startup === undefined ? true : _ref5$startup;
-      return _react2.default.createElement(_PricingComponents.PricingColChildren, { prop: startup, key: i + 100 });
+      return _react2.default.createElement(_PricingComponents.PricingColChildren, { prop: startup, key: i + 100, DynamicTrans: DynamicTrans });
     }),
     _react2.default.createElement(
       'a',
@@ -133,7 +133,7 @@ var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
     featurePricing.map(function (_ref7, i) {
       var _ref7$enterprise = _ref7.enterprise,
           enterprise = _ref7$enterprise === undefined ? true : _ref7$enterprise;
-      return _react2.default.createElement(_PricingComponents.PricingColChildren, { prop: enterprise, key: i + 300 });
+      return _react2.default.createElement(_PricingComponents.PricingColChildren, { prop: enterprise, key: i + 300, DynamicTrans: DynamicTrans });
     }),
     enterpriseButton || _react2.default.createElement(
       'a',
