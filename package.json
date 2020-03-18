@@ -1,6 +1,6 @@
 {
   "name": "@ledgy/pricing",
-  "version": "1.4",
+  "version": "1.4.0",
   "description": "A component with information for company pricing at Ledgy",
   "main": "dist/index.js",
   "scripts": {
