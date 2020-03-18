@@ -34,9 +34,9 @@ export const PricingCol = ({
   </div>
 );
 
-export const PricingColChildren = ({ prop }) => (
+export const PricingColChildren = ({ prop, DynamicTrans = ({ children }) => children }) => (
   <div className="pricing-col-children">
-    {(typeof prop !== 'boolean' && prop) || (!prop && Times) || (Check)}
+    {(typeof prop === 'string' && <DynamicTrans>{prop}</DynamicTrans>) || (!prop && Times) || (Check)}
   </div>
 );
 

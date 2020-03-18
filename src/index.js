@@ -23,7 +23,7 @@ export const LedgyPricing = ({
   highlightScaleup = false,
   highlightEnterprise = false,
   DynamicTrans = ({ children }) => children,
-  t = text => text
+  t = (text) => text,
 }) => {
   const TextCol = ({ name = '' }) => (
     <PricingCol textLeft name={name}>
@@ -34,7 +34,7 @@ export const LedgyPricing = ({
   );
 
   const StartupCol = (
-    <PricingCol icon={startupIcon} iconWidth={80} name={STARTUP} price={t("Free")}>
+    <PricingCol icon={startupIcon} iconWidth={80} name={STARTUP} price={t('Free')}>
       {featurePricing.map(({ startup = true }, i) => (
         <PricingColChildren prop={startup} key={i + 100} />
       ))}
@@ -55,7 +55,7 @@ export const LedgyPricing = ({
       icon={scaleupIcon}
       iconWidth={180}
       name={SCALEUP}
-      price={t("€2 / stakeholder / month")}
+      price={t('€2 / stakeholder / month')}
     >
       {featurePricing.map(({ scaleup = true }, i) => (
         <PricingColChildren prop={scaleup} key={i + 200} />
@@ -77,7 +77,7 @@ export const LedgyPricing = ({
       icon={enterpriseIcon}
       iconWidth={180}
       name={ENTERPRISE}
-      price="Contact us"
+      price={t('Contact us')}
     >
       {featurePricing.map(({ enterprise = true }, i) => (
         <PricingColChildren prop={enterprise} key={i + 300} />
@@ -86,7 +86,7 @@ export const LedgyPricing = ({
       || (
       <a href="https://app.ledgy.com/signup">
         <button type="button" className="my-4">
-          Get a demo
+          <DynamicTrans>Get a demo</DynamicTrans>
         </button>
       </a>
       )}

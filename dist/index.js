@@ -44,17 +44,26 @@ var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
       _ref$highlightScaleup = _ref.highlightScaleup,
       highlightScaleup = _ref$highlightScaleup === undefined ? false : _ref$highlightScaleup,
       _ref$highlightEnterpr = _ref.highlightEnterprise,
-      highlightEnterprise = _ref$highlightEnterpr === undefined ? false : _ref$highlightEnterpr;
+      highlightEnterprise = _ref$highlightEnterpr === undefined ? false : _ref$highlightEnterpr,
+      _ref$DynamicTrans = _ref.DynamicTrans,
+      DynamicTrans = _ref$DynamicTrans === undefined ? function (_ref2) {
+    var children = _ref2.children;
+    return children;
+  } : _ref$DynamicTrans,
+      _ref$t = _ref.t,
+      t = _ref$t === undefined ? function (text) {
+    return text;
+  } : _ref$t;
 
-  var TextCol = function TextCol(_ref2) {
-    var _ref2$name = _ref2.name,
-        name = _ref2$name === undefined ? '' : _ref2$name;
+  var TextCol = function TextCol(_ref3) {
+    var _ref3$name = _ref3.name,
+        name = _ref3$name === undefined ? '' : _ref3$name;
     return _react2.default.createElement(
       _PricingComponents.PricingCol,
       { textLeft: true, name: name },
-      featurePricing.map(function (_ref3, i) {
-        var _ref3$text = _ref3.text,
-            text = _ref3$text === undefined ? true : _ref3$text;
+      featurePricing.map(function (_ref4, i) {
+        var _ref4$text = _ref4.text,
+            text = _ref4$text === undefined ? true : _ref4$text;
         return _react2.default.createElement(_PricingComponents.PricingColChildren, { prop: text, key: i });
       })
     );
@@ -62,10 +71,10 @@ var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
 
   var StartupCol = _react2.default.createElement(
     _PricingComponents.PricingCol,
-    { icon: _startupIcon2.default, iconWidth: 80, name: STARTUP, price: 'Free' },
-    featurePricing.map(function (_ref4, i) {
-      var _ref4$startup = _ref4.startup,
-          startup = _ref4$startup === undefined ? true : _ref4$startup;
+    { icon: _startupIcon2.default, iconWidth: 80, name: STARTUP, price: t('Free') },
+    featurePricing.map(function (_ref5, i) {
+      var _ref5$startup = _ref5.startup,
+          startup = _ref5$startup === undefined ? true : _ref5$startup;
       return _react2.default.createElement(_PricingComponents.PricingColChildren, { prop: startup, key: i + 100 });
     }),
     _react2.default.createElement(
@@ -74,7 +83,11 @@ var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
       startupButton || _react2.default.createElement(
         'button',
         { type: 'button', className: 'my-4' },
-        'Sign up'
+        _react2.default.createElement(
+          DynamicTrans,
+          null,
+          'Sign up'
+        )
       )
     )
   );
@@ -86,11 +99,11 @@ var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
       icon: _scaleupIcon2.default,
       iconWidth: 180,
       name: SCALEUP,
-      price: '\u20AC2 / stakeholder / month'
+      price: t('€2 / stakeholder / month')
     },
-    featurePricing.map(function (_ref5, i) {
-      var _ref5$scaleup = _ref5.scaleup,
-          scaleup = _ref5$scaleup === undefined ? true : _ref5$scaleup;
+    featurePricing.map(function (_ref6, i) {
+      var _ref6$scaleup = _ref6.scaleup,
+          scaleup = _ref6$scaleup === undefined ? true : _ref6$scaleup;
       return _react2.default.createElement(_PricingComponents.PricingColChildren, { prop: scaleup, key: i + 200 });
     }),
     scaleupButton || _react2.default.createElement(
@@ -99,7 +112,11 @@ var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
       _react2.default.createElement(
         'button',
         { type: 'button', className: 'my-4' },
-        'Free trial'
+        _react2.default.createElement(
+          DynamicTrans,
+          null,
+          'Free trial'
+        )
       )
     )
   );
@@ -111,11 +128,11 @@ var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
       icon: _enterpriseIcon2.default,
       iconWidth: 180,
       name: ENTERPRISE,
-      price: 'Contact us'
+      price: t('Contact us')
     },
-    featurePricing.map(function (_ref6, i) {
-      var _ref6$enterprise = _ref6.enterprise,
-          enterprise = _ref6$enterprise === undefined ? true : _ref6$enterprise;
+    featurePricing.map(function (_ref7, i) {
+      var _ref7$enterprise = _ref7.enterprise,
+          enterprise = _ref7$enterprise === undefined ? true : _ref7$enterprise;
       return _react2.default.createElement(_PricingComponents.PricingColChildren, { prop: enterprise, key: i + 300 });
     }),
     enterpriseButton || _react2.default.createElement(
@@ -124,7 +141,11 @@ var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
       _react2.default.createElement(
         'button',
         { type: 'button', className: 'my-4' },
-        'Get a demo'
+        _react2.default.createElement(
+          DynamicTrans,
+          null,
+          'Get a demo'
+        )
       )
     )
   );
