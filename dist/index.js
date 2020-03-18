@@ -104,7 +104,7 @@ var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
     featurePricing.map(function (_ref6, i) {
       var _ref6$scaleup = _ref6.scaleup,
           scaleup = _ref6$scaleup === undefined ? true : _ref6$scaleup;
-      return _react2.default.createElement(_PricingComponents.PricingColChildren, { prop: scaleup, key: i + 200 });
+      return _react2.default.createElement(_PricingComponents.PricingColChildren, { prop: scaleup, key: i + 200, DynamicTrans: DynamicTrans });
     }),
     scaleupButton || _react2.default.createElement(
       'a',

@@ -58,7 +58,7 @@ export const LedgyPricing = ({
       price={t('€2 / stakeholder / month')}
     >
       {featurePricing.map(({ scaleup = true }, i) => (
-        <PricingColChildren prop={scaleup} key={i + 200} />
+        <PricingColChildren prop={scaleup} key={i + 200} DynamicTrans={DynamicTrans} />
       ))}
       {scaleupButton
       || (

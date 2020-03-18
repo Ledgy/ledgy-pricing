@@ -36,7 +36,7 @@ export const getCompanyFeaturePricing = () => [
   { text: 'Dedicated account manager', startup: false, scaleup: false },
   { text: 'SLA', startup: false, scaleup: false },
   { text: 'Standard e-signatures', startup: false },
-  { text: 'Qualified e-signatures', startup: false },
+  { text: 'Qualified e-signatures', startup: false, scaleup: false },
   {
     text: 'Document templating',
     startup: false,
