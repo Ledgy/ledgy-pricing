@@ -34,7 +34,7 @@ var featurePricing = (0, _pricingText.getCompanyFeaturePricing)(); /* eslint-dis
 /* eslint-disable react/jsx-filename-extension */
 
 var STARTUP = 'Startup';
-var SCALEUP = 'Scaleup';
+var PREMIUM = 'Premium';
 var ENTERPRISE = 'Enterprise';
 
 var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
@@ -98,7 +98,7 @@ var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
       highlight: highlightScaleup,
       icon: _scaleupIcon2.default,
       iconWidth: 180,
-      name: SCALEUP,
+      name: PREMIUM,
       price: t('€2 / stakeholder / month')
     },
     featurePricing.map(function (_ref6, i) {
@@ -169,7 +169,7 @@ var LedgyPricing = exports.LedgyPricing = function LedgyPricing(_ref) {
     _react2.default.createElement(
       _PricingComponents.PricingRow,
       { mobileView: true, marginBottom: true },
-      _react2.default.createElement(TextCol, { name: SCALEUP }),
+      _react2.default.createElement(TextCol, { name: PREMIUM }),
       ScaleupCol
     ),
     _react2.default.createElement(
