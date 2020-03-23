@@ -13,7 +13,7 @@ import { PricingCol, PricingColChildren, PricingRow } from './PricingComponents'
 
 const featurePricing = getCompanyFeaturePricing();
 const STARTUP = 'Startup';
-const SCALEUP = 'Scaleup';
+const PREMIUM = 'Premium';
 const ENTERPRISE = 'Enterprise';
 
 export const LedgyPricing = ({
@@ -54,7 +54,7 @@ export const LedgyPricing = ({
       highlight={highlightScaleup}
       icon={scaleupIcon}
       iconWidth={180}
-      name={SCALEUP}
+      name={PREMIUM}
       price={t('€2 / stakeholder / month')}
     >
       {featurePricing.map(({ scaleup = true }, i) => (
@@ -107,7 +107,7 @@ export const LedgyPricing = ({
       </PricingRow>
 
       <PricingRow mobileView marginBottom>
-        <TextCol name={SCALEUP} />
+        <TextCol name={PREMIUM} />
         {ScaleupCol}
       </PricingRow>
 
