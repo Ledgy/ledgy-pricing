@@ -7,7 +7,7 @@ export const getCompanyFeaturePricing = () => [
   { text: 'Advanced modeling', startup: false },
   { text: 'Holding confirmations', startup: false },
   { text: 'Equity plans', startup: false },
-  { text: 'Employee dashboard', startup: false, scaleup: false },
+  { text: 'Employee dashboard', startup: false },
   {
     text: 'Data rooms',
     startup: '50 MB',
@@ -17,12 +17,7 @@ export const getCompanyFeaturePricing = () => [
   { text: 'Data room sharing', startup: false },
   { text: 'Standard e-signatures', startup: false },
   { text: 'Qualified e-signatures', startup: false, scaleup: false },
-  {
-    text: 'Document templating',
-    startup: false,
-    scaleup: false,
-    enterprise: 'Coming soon',
-  },
+  { text: 'Document templating', startup: false, scaleup: false },
   {
     text: 'Admin seats',
     startup: '2',
@@ -40,6 +35,9 @@ export const getCompanyFeaturePricing = () => [
     startup: false,
     scaleup: 'Basic',
     enterprise: 'Priority',
+  },
+  {
+    text: 'HR integration', startup: false, scaleup: false, enterprise: 'Coming soon',
   },
   { text: 'Onboarding data audit', startup: false, scaleup: false },
   { text: 'Dedicated account manager', startup: false, scaleup: false },
