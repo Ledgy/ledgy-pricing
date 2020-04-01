@@ -2,11 +2,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import startupIcon from '../images/startup-icon.png';
-import scaleupIcon from '../images/scaleup-icon.png';
 import enterpriseIcon from '../images/enterprise-icon.png';
 
-import { StartupCol, TextCol, PricingCol, PricingColChildren, PricingRow } from './components';
+import { StartupCol, ScaleupCol, TextCol, PricingCol, PricingColChildren, PricingRow } from './components';
 import { STARTUP, PREMIUM, ENTERPRISE } from './lib';
 import { featurePricing } from './components/lib';
 
@@ -19,28 +17,6 @@ export const LedgyPricing = ({
   DynamicTrans = ({ children }) => children,
   t = (text) => text,
 }) => {
-  const ScaleupCol = (
-    <PricingCol
-      highlight={highlightScaleup}
-      icon={scaleupIcon}
-      iconWidth={180}
-      name={PREMIUM}
-      price={t('€2 / stakeholder / month')}
-    >
-      {featurePricing.map(({ scaleup = true }, i) => (
-        <PricingColChildren prop={scaleup} key={i + 200} DynamicTrans={DynamicTrans} />
-      ))}
-      {scaleupButton
-      || (
-      <a href="https://app.ledgy.com/signup">
-        <button type="button" className="my-4">
-          <DynamicTrans>Free trial</DynamicTrans>
-        </button>
-      </a>
-      )}
-    </PricingCol>
-  );
-
   const EnterpriseCol = (
     <PricingCol
       highlight={highlightEnterprise}
@@ -66,19 +42,19 @@ export const LedgyPricing = ({
     <div className="container my-4">
       <PricingRow>
         <TextCol DynamicTrans={DynamicTrans} />
-        <StartupCol DynamicTrans={DynamicTrans} t={t} startupButton={startupButton} />
-        {ScaleupCol}
+        <StartupCol DynamicTrans={DynamicTrans} t={t} button={startupButton} />
+        <ScaleupCol DynamicTrans={DynamicTrans} t={t} button={scaleupButton} highlight={highlightScaleup} />
         {EnterpriseCol}
       </PricingRow>
 
       <PricingRow mobileView marginBottom>
         <TextCol DynamicTrans={DynamicTrans} name={STARTUP} />
-        <StartupCol DynamicTrans={DynamicTrans} t={t} startupButton={startupButton} />
+        <StartupCol DynamicTrans={DynamicTrans} t={t} button={startupButton} />
       </PricingRow>
 
       <PricingRow mobileView marginBottom>
         <TextCol DynamicTrans={DynamicTrans} name={PREMIUM} />
-        {ScaleupCol}
+        <ScaleupCol DynamicTrans={DynamicTrans} t={t} button={scaleupButton} highlight={highlightScaleup} />
       </PricingRow>
 
       <PricingRow mobileView>
