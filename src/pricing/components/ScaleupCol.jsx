@@ -20,8 +20,8 @@ export const ScaleupCol = ({
     name={PREMIUM}
     price={t('€2 / stakeholder / month')}
   >
-    {featurePricing.map(({ scaleup = true }, i) => (
-      <PricingColChildren prop={scaleup} key={i + 200} DynamicTrans={DynamicTrans} />
+    {featurePricing.map(({ featureGroup = false, scaleup = true }, i) => (
+      <PricingColChildren isEmpty={featureGroup} prop={scaleup} key={i + 200} DynamicTrans={DynamicTrans} />
     ))}
     {button || <DefaultButton DynamicTrans={DynamicTrans} text="Free trial" />}
     <PricingColChildren prop="14 days free trial" />

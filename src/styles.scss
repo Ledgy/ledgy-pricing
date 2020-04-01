@@ -79,6 +79,12 @@ html, body {
   &:not(:first-of-type) {
     @include pricing-border;
   }
+  &-header {
+    display: block;
+    height: 35px;
+    padding: 0.25rem;
+    margin-top: 1rem;
+  }
   &-children {
     display: block;
     height: 35px;

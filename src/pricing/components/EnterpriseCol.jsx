@@ -20,8 +20,8 @@ export const EnterpriseCol = ({
     name={ENTERPRISE}
     price={t('Contact us')}
   >
-    {featurePricing.map(({ enterprise = true }, i) => (
-      <PricingColChildren prop={enterprise} key={i + 300} DynamicTrans={DynamicTrans} />
+    {featurePricing.map(({ featureGroup = false, enterprise = true }, i) => (
+      <PricingColChildren isEmpty={featureGroup} prop={enterprise} key={i + 300} DynamicTrans={DynamicTrans} />
     ))}
     {button || <DefaultButton DynamicTrans={DynamicTrans} text="Get a demo" />}
   </PricingCol>
