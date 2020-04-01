@@ -16,28 +16,29 @@ export const LedgyPricing = ({
   DynamicTrans = ({ children }) => children,
   t = (text) => text,
 }) => {
+  const trans = { DynamicTrans, t };
   return (
     <div className="container my-4">
       <PricingRow>
-        <TextCol DynamicTrans={DynamicTrans} />
-        <StartupCol DynamicTrans={DynamicTrans} t={t} button={startupButton} />
-        <ScaleupCol DynamicTrans={DynamicTrans} t={t} button={scaleupButton} highlight={highlightScaleup} />
-        <EnterpriseCol DynamicTrans={DynamicTrans} t={t} button={enterpriseButton} highlight={highlightEnterprise} />
+        <TextCol {...trans} />
+        <StartupCol {...trans} button={startupButton} />
+        <ScaleupCol {...trans} button={scaleupButton} highlight={highlightScaleup} />
+        <EnterpriseCol {...trans} button={enterpriseButton} highlight={highlightEnterprise} />
       </PricingRow>
 
       <PricingRow mobileView marginBottom>
-        <TextCol DynamicTrans={DynamicTrans} name={STARTUP} />
-        <StartupCol DynamicTrans={DynamicTrans} t={t} button={startupButton} />
+        <TextCol {...trans} name={STARTUP} />
+        <StartupCol {...trans} button={startupButton} />
       </PricingRow>
 
       <PricingRow mobileView marginBottom>
-        <TextCol DynamicTrans={DynamicTrans} name={PREMIUM} />
-        <ScaleupCol DynamicTrans={DynamicTrans} t={t} button={scaleupButton} highlight={highlightScaleup} />
+        <TextCol {...trans} name={PREMIUM} />
+        <ScaleupCol {...trans} button={scaleupButton} highlight={highlightScaleup} />
       </PricingRow>
 
       <PricingRow mobileView>
-        <TextCol DynamicTrans={DynamicTrans} name={ENTERPRISE} />
-        <EnterpriseCol DynamicTrans={DynamicTrans} t={t} button={enterpriseButton} highlight={highlightEnterprise} />
+        <TextCol {...trans} name={ENTERPRISE} />
+        <EnterpriseCol {...trans} button={enterpriseButton} highlight={highlightEnterprise} />
       </PricingRow>
     </div>
   );
