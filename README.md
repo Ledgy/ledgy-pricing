@@ -28,6 +28,8 @@ After all changes are committed to master, remember to bump up the `package.json
 
 The helper utility `npm run prepublish` will copy the transpiled code to the dist folder.
 
+Finally, `npm publish` will publish the package to our Ledgy npm account.
+
 Last step is to update [ledgy-app] and [ledgy.com] to use the latest `ledgy-pricing` version.
 
 [ledgy-app]: https://github.com/morloy/ledgy-app
