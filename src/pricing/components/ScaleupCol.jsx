@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 
 import { DefaultButton } from './DefaultButton';
@@ -8,7 +10,9 @@ import { featurePricing } from './lib';
 import { PREMIUM } from '../lib';
 import scaleupIcon from '../../images/scaleup-icon.png';
 
-export const ScaleupCol = ({ button, highlight, DynamicTrans, t }) => (
+export const ScaleupCol = ({
+  button, highlight, DynamicTrans, t,
+}) => (
   <PricingCol
     highlight={highlight}
     icon={scaleupIcon}

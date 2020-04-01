@@ -1,9 +1,10 @@
-/* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 
-import { EnterpriseCol, StartupCol, ScaleupCol, TextCol, PricingRow } from './components';
+import {
+  EnterpriseCol, StartupCol, ScaleupCol, TextCol, PricingRow,
+} from './components';
 import { STARTUP, PREMIUM, ENTERPRISE } from './lib';
 
 export const LedgyPricing = ({
