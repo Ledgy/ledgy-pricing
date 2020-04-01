@@ -5,7 +5,6 @@ import React from 'react';
 
 import { EnterpriseCol, StartupCol, ScaleupCol, TextCol, PricingRow } from './components';
 import { STARTUP, PREMIUM, ENTERPRISE } from './lib';
-import { featurePricing } from './components/lib';
 
 export const LedgyPricing = ({
   startupButton,
