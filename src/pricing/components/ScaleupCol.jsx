@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { DefaultButton } from './DefaultButton';
 import { PricingCol } from './PricingCol';
 import { PricingColChildren } from './PricingColChildren';
 import { featurePricing } from './lib';
@@ -18,13 +19,6 @@ export const ScaleupCol = ({ button, highlight, DynamicTrans, t }) => (
     {featurePricing.map(({ scaleup = true }, i) => (
       <PricingColChildren prop={scaleup} key={i + 200} DynamicTrans={DynamicTrans} />
     ))}
-    {button
-    || (
-    <a href="https://app.ledgy.com/signup">
-      <button type="button" className="my-4">
-        <DynamicTrans>Free trial</DynamicTrans>
-      </button>
-    </a>
-    )}
+    {button || <DefaultButton DynamicTrans={DynamicTrans} text="Free trial" />}
   </PricingCol>
 );

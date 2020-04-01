@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { DefaultButton } from './DefaultButton';
 import { PricingCol } from './PricingCol';
 import { PricingColChildren } from './PricingColChildren';
 import { featurePricing } from './lib';
@@ -18,13 +19,6 @@ export const EnterpriseCol = ({ button, highlight, DynamicTrans, t }) => (
     {featurePricing.map(({ enterprise = true }, i) => (
       <PricingColChildren prop={enterprise} key={i + 300} DynamicTrans={DynamicTrans} />
     ))}
-    {button
-    || (
-    <a href="https://app.ledgy.com/signup">
-      <button type="button" className="my-4">
-        <DynamicTrans>Get a demo</DynamicTrans>
-      </button>
-    </a>
-    )}
+    {button || <DefaultButton DynamicTrans={DynamicTrans} text="Get a demo" />}
   </PricingCol>
 );
