@@ -1,3 +1,3 @@
 import './styles.scss';
 
-export { LedgyPricing } from './pricing'
+export { LedgyPricing } from './pricing';
