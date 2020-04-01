@@ -4,7 +4,7 @@ import React from 'react';
 
 import { DefaultButton } from './DefaultButton';
 import { PricingCol } from './PricingCol';
-import { PricingColChildren } from './PricingColChildren';
+import { PricingCell } from './PricingCell';
 import { featurePricing } from './lib';
 
 import { PREMIUM } from '../lib';
@@ -21,9 +21,9 @@ export const ScaleupCol = ({
     price={t('€2 / stakeholder / month')}
   >
     {featurePricing.map(({ featureGroup = false, scaleup = true }, i) => (
-      <PricingColChildren isEmpty={featureGroup} prop={scaleup} key={i + 200} DynamicTrans={DynamicTrans} />
+      <PricingCell isEmpty={featureGroup} prop={scaleup} key={i + 200} DynamicTrans={DynamicTrans} />
     ))}
     {button || <DefaultButton DynamicTrans={DynamicTrans} text="Free trial" />}
-    <PricingColChildren prop="14 days free trial" />
+    <PricingCell prop="14 days free trial" />
   </PricingCol>
 );
