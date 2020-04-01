@@ -1,4 +1,4 @@
-export const getCompanyFeaturePricing = () => [
+export const featurePricing = [
   { text: 'Swiss privacy & security' },
   { text: 'Cap table' },
   { text: 'Basic reporting' },
