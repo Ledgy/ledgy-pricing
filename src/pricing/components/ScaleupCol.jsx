@@ -24,5 +24,6 @@ export const ScaleupCol = ({
       <PricingColChildren prop={scaleup} key={i + 200} DynamicTrans={DynamicTrans} />
     ))}
     {button || <DefaultButton DynamicTrans={DynamicTrans} text="Free trial" />}
+    <PricingColChildren prop="14 days free trial" />
   </PricingCol>
 );
