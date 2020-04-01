@@ -6,7 +6,7 @@ import startupIcon from '../images/startup-icon.png';
 import scaleupIcon from '../images/scaleup-icon.png';
 import enterpriseIcon from '../images/enterprise-icon.png';
 
-import { TextCol, PricingCol, PricingColChildren, PricingRow } from './components';
+import { StartupCol, TextCol, PricingCol, PricingColChildren, PricingRow } from './components';
 import { STARTUP, PREMIUM, ENTERPRISE } from './lib';
 import { featurePricing } from './components/lib';
 
@@ -19,22 +19,6 @@ export const LedgyPricing = ({
   DynamicTrans = ({ children }) => children,
   t = (text) => text,
 }) => {
-  const StartupCol = (
-    <PricingCol icon={startupIcon} iconWidth={80} name={STARTUP} price={t('Free')} DynamicTrans={DynamicTrans}>
-      {featurePricing.map(({ startup = true }, i) => (
-        <PricingColChildren prop={startup} key={i + 100} DynamicTrans={DynamicTrans} />
-      ))}
-      <a href="https://app.ledgy.com/signup">
-        {startupButton
-        || (
-        <button type="button" className="my-4">
-          <DynamicTrans>Sign up</DynamicTrans>
-        </button>
-        )}
-      </a>
-    </PricingCol>
-  );
-
   const ScaleupCol = (
     <PricingCol
       highlight={highlightScaleup}
@@ -82,14 +66,14 @@ export const LedgyPricing = ({
     <div className="container my-4">
       <PricingRow>
         <TextCol DynamicTrans={DynamicTrans} />
-        {StartupCol}
+        <StartupCol DynamicTrans={DynamicTrans} t={t} startupButton={startupButton} />
         {ScaleupCol}
         {EnterpriseCol}
       </PricingRow>
 
       <PricingRow mobileView marginBottom>
         <TextCol DynamicTrans={DynamicTrans} name={STARTUP} />
-        {StartupCol}
+        <StartupCol DynamicTrans={DynamicTrans} t={t} startupButton={startupButton} />
       </PricingRow>
 
       <PricingRow mobileView marginBottom>
