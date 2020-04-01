@@ -6,8 +6,9 @@ import startupIcon from '../images/startup-icon.png';
 import scaleupIcon from '../images/scaleup-icon.png';
 import enterpriseIcon from '../images/enterprise-icon.png';
 
-import { PricingCol, PricingColChildren, PricingRow } from './components';
-import { featurePricing, STARTUP, PREMIUM, ENTERPRISE } from './lib';
+import { TextCol, PricingCol, PricingColChildren, PricingRow } from './components';
+import { STARTUP, PREMIUM, ENTERPRISE } from './lib';
+import { featurePricing } from './components/lib';
 
 export const LedgyPricing = ({
   startupButton,
@@ -18,14 +19,6 @@ export const LedgyPricing = ({
   DynamicTrans = ({ children }) => children,
   t = (text) => text,
 }) => {
-  const TextCol = ({ name = '' }) => (
-    <PricingCol textLeft name={name}>
-      {featurePricing.map(({ text = true }, i) => (
-        <PricingColChildren prop={text} key={i} DynamicTrans={DynamicTrans} />
-      ))}
-    </PricingCol>
-  );
-
   const StartupCol = (
     <PricingCol icon={startupIcon} iconWidth={80} name={STARTUP} price={t('Free')} DynamicTrans={DynamicTrans}>
       {featurePricing.map(({ startup = true }, i) => (
@@ -88,24 +81,24 @@ export const LedgyPricing = ({
   return (
     <div className="container my-4">
       <PricingRow>
-        <TextCol />
+        <TextCol DynamicTrans={DynamicTrans} />
         {StartupCol}
         {ScaleupCol}
         {EnterpriseCol}
       </PricingRow>
 
       <PricingRow mobileView marginBottom>
-        <TextCol name={STARTUP} />
+        <TextCol DynamicTrans={DynamicTrans} name={STARTUP} />
         {StartupCol}
       </PricingRow>
 
       <PricingRow mobileView marginBottom>
-        <TextCol name={PREMIUM} />
+        <TextCol DynamicTrans={DynamicTrans} name={PREMIUM} />
         {ScaleupCol}
       </PricingRow>
 
       <PricingRow mobileView>
-        <TextCol name={ENTERPRISE} />
+        <TextCol DynamicTrans={DynamicTrans} name={ENTERPRISE} />
         {EnterpriseCol}
       </PricingRow>
     </div>
