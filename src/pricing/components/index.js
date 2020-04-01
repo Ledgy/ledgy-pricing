@@ -1,5 +1,4 @@
-export * from './PricingCol';
-export * from './PricingColChildren';
+export * from './EnterpriseCol';
 export * from './PricingRow';
 export * from './StartupCol';
 export * from './ScaleupCol';
