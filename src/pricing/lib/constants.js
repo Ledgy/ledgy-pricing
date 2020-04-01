@@ -1,4 +1,8 @@
-export const getCompanyFeaturePricing = () => [
+export const STARTUP = 'Startup';
+export const PREMIUM = 'Premium';
+export const ENTERPRISE = 'Enterprise';
+
+export const featurePricing = [
   { text: 'Swiss privacy & security' },
   { text: 'Cap table' },
   { text: 'Basic reporting' },
