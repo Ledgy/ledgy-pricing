@@ -24,6 +24,6 @@ export const ScaleupCol = ({
       <PricingCell isEmpty={featureGroup} prop={scaleup} key={i + 200} DynamicTrans={DynamicTrans} />
     ))}
     {button || <DefaultButton DynamicTrans={DynamicTrans} text="Free trial" />}
-    <PricingCell prop="14 days free trial" />
+    <PricingCell className="mb-4" prop="14 days free trial" />
   </PricingCol>
 );
