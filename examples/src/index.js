@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { LedgyPricing } from '../../src';
+import { LedgyPricing, FEATURES } from '../../src';
 
 const App = () => (
-  <LedgyPricing />
+  <LedgyPricing highlightFeature={FEATURES.ADMIN_SEATS}/>
 );
 
 render(<App />, document.getElementById('root'));

@@ -6,10 +6,10 @@ import { PricingCol } from './PricingCol';
 import { TextCell } from './TextCell';
 import { featurePricing } from './lib';
 
-export const TextCol = ({ name = '', DynamicTrans }) => (
+export const TextCol = ({ name = '', highlightFeature = '', DynamicTrans }) => (
   <PricingCol textLeft name={name}>
     {featurePricing.map(({ featureGroup = false, text = true }, i) => (
-      <TextCell text={text} isHeader={featureGroup} key={i} DynamicTrans={DynamicTrans} />
+      <TextCell text={text} isHeader={featureGroup} highlight={text === highlightFeature} key={i} DynamicTrans={DynamicTrans} />
     ))}
   </PricingCol>
 );
