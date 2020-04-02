@@ -12,7 +12,7 @@ export const PricingCol = ({
   highlight = false,
 }) => (
   <div
-    className={`pricing-col ${textLeft ? 'text-left' : 'text-center'} ${
+    className={`pricing-cell ${textLeft ? 'text-left' : 'text-center'} ${
       highlight ? 'border-energetic-blue' : ''
     }`}
   >

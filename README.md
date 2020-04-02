@@ -22,6 +22,19 @@ After making your changes, make sure there are no lint errors:
 npm run lint
 ```
 
+#### Component API
+
+ The LedgyPricing component accepts the following optional parameters (as of v1.5.0):
+ ```
+  startupButton: Node,
+  scaleupButton: Node,
+  enterpriseButton: Node,
+  highlightScaleup: boolean = false,
+  highlightEnterprise: boolean = false,
+  highlightFeature: string = '',
+```
+
+
 #### Release new version
 
 After all changes are committed to master, remember to bump up the `package.json` version and publish it to npm.

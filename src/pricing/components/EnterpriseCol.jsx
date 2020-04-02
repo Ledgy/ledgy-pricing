@@ -4,7 +4,7 @@ import React from 'react';
 
 import { DefaultButton } from './DefaultButton';
 import { PricingCol } from './PricingCol';
-import { PricingColChildren } from './PricingColChildren';
+import { PricingCell } from './PricingCell';
 import { featurePricing } from './lib';
 
 import { ENTERPRISE } from '../lib';
@@ -20,8 +20,8 @@ export const EnterpriseCol = ({
     name={ENTERPRISE}
     price={t('Contact us')}
   >
-    {featurePricing.map(({ enterprise = true }, i) => (
-      <PricingColChildren prop={enterprise} key={i + 300} DynamicTrans={DynamicTrans} />
+    {featurePricing.map(({ featureGroup = false, enterprise = true }, i) => (
+      <PricingCell isEmpty={featureGroup} prop={enterprise} key={i + 300} DynamicTrans={DynamicTrans} />
     ))}
     {button || <DefaultButton DynamicTrans={DynamicTrans} text="Get a demo" />}
   </PricingCol>
