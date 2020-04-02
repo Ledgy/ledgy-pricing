@@ -1,8 +1,9 @@
-const ANY_VESTING_SCHEDULE = 'Any vesting schedule';
+const EQUITY_PLANS = 'Any vesting schedule';
 const EMPLOYEE_DASHBOARD = 'Employee dashboard';
 const HR_INTEGRATION = 'HR system integration';
 
 const SCENARIO_MODELING = 'Scenario modeling';
+const ADVANCED_MODELING = 'Advanced modeling';
 const MULTIPLE_SCENARIOS = 'Multiple scenarios';
 const HOLDING_CONFIRMATIONS = 'Holding confirmations';
 
@@ -26,12 +27,13 @@ const DEDICATED_ACCOUNT = 'Dedicated account manager';
 
 export const FEATURES = Object.freeze({
   // Equity plans
-  ANY_VESTING_SCHEDULE,
+  EQUITY_PLANS,
   EMPLOYEE_DASHBOARD,
   HR_INTEGRATION,
 
   // Cap table
   SCENARIO_MODELING,
+  ADVANCED_MODELING,
   MULTIPLE_SCENARIOS,
   HOLDING_CONFIRMATIONS,
 
@@ -60,12 +62,13 @@ export const FEATURES = Object.freeze({
 
 export const featurePricing = [
   { text: 'Equity plans', featureGroup: true },
-  { text: ANY_VESTING_SCHEDULE, startup: false },
+  { text: EQUITY_PLANS, startup: false },
   { text: EMPLOYEE_DASHBOARD, startup: false },
   { text: HR_INTEGRATION, startup: false, scaleup: false },
 
   { text: 'Cap table', featureGroup: true },
   { text: SCENARIO_MODELING },
+  { text: ADVANCED_MODELING, startup: false },
   { text: MULTIPLE_SCENARIOS, startup: false, scaleup: '3', enterprise: 'Unlimited' },
   { text: HOLDING_CONFIRMATIONS, startup: 'Download only', scaleup: 'Share instantly', enterprise: 'Custom branding' },
 
