@@ -1,10 +1,13 @@
-const EQUITY_PLANS = 'Any vesting schedule';
+const EQUITY_PLANS = 'Pools for equity plans';
+const GRANTS = 'Option & phantom grants';
+const ANY_VESTING = 'Any vesting schedule';
 const EMPLOYEE_DASHBOARD = 'Employee dashboard';
 const HR_INTEGRATION = 'HR system integration';
 
-const SCENARIO_MODELING = 'Scenario modeling';
-const ADVANCED_MODELING = 'Advanced modeling';
-const MULTIPLE_SCENARIOS = 'Multiple scenarios';
+const CAP_TABLE_MANAGEMENT = 'Cap table management';
+const SCENARIO_MODELING = 'Funding round modeling';
+const EXIT_MODELING = 'Exit break point analysis';
+const MULTIPLE_SCENARIOS = 'Multiple scenarios & rounds';
 const HOLDING_CONFIRMATIONS = 'Holding confirmations';
 
 const DATA_ROOM = 'Data room';
@@ -14,7 +17,7 @@ const TEMPLATING = 'Templating';
 const CUSTOM_BRANDING = 'Custom branding';
 
 const KPI_SHARING = 'KPI sharing';
-const BASIC_REPORTING = 'Basic reporting';
+const BASIC_REPORTING = 'Written reports';
 const BRANDED_REPORTING = 'Branded reporting';
 
 const INVESTOR_PORTFOLIO = 'Investor portfolio';
@@ -28,12 +31,15 @@ const DEDICATED_ACCOUNT = 'Dedicated account manager';
 export const FEATURES = Object.freeze({
   // Equity plans
   EQUITY_PLANS,
+  GRANTS,
+  ANY_VESTING,
   EMPLOYEE_DASHBOARD,
   HR_INTEGRATION,
 
   // Cap table
+  CAP_TABLE_MANAGEMENT,
   SCENARIO_MODELING,
-  ADVANCED_MODELING,
+  EXIT_MODELING,
   MULTIPLE_SCENARIOS,
   HOLDING_CONFIRMATIONS,
 
@@ -62,13 +68,16 @@ export const FEATURES = Object.freeze({
 
 export const featurePricing = [
   { text: 'Equity plans', featureGroup: true },
-  { text: EQUITY_PLANS, startup: false },
+  { text: EQUITY_PLANS },
+  { text: GRANTS, startup: false },
+  { text: ANY_VESTING, startup: false },
   { text: EMPLOYEE_DASHBOARD, startup: false },
   { text: HR_INTEGRATION, startup: false, scaleup: false },
 
   { text: 'Cap table', featureGroup: true },
+  { text: CAP_TABLE_MANAGEMENT },
   { text: SCENARIO_MODELING },
-  { text: ADVANCED_MODELING, startup: false },
+  { text: EXIT_MODELING, startup: false },
   { text: MULTIPLE_SCENARIOS, startup: false, scaleup: '3', enterprise: 'Unlimited' },
   { text: HOLDING_CONFIRMATIONS, startup: 'Download only', scaleup: 'Share instantly', enterprise: 'Custom branding' },
 
@@ -82,7 +91,7 @@ export const featurePricing = [
   { text: 'Investor relations', featureGroup: true },
   { text: KPI_SHARING },
   { text: BASIC_REPORTING },
-  { text: BRANDED_REPORTING, startup: false },
+  { text: BRANDED_REPORTING, startup: false, scaleup: false },
 
   { text: 'Access rights', featureGroup: true },
   { text: INVESTOR_PORTFOLIO },

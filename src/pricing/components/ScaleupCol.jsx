@@ -11,7 +11,7 @@ import { PREMIUM } from '../lib';
 import scaleupIcon from '../../images/scaleup-icon.png';
 
 export const ScaleupCol = ({
-  button, highlight, DynamicTrans, t,
+  button, highlight, text, DynamicTrans, t,
 }) => (
   <PricingCol
     highlight={highlight}
@@ -23,7 +23,7 @@ export const ScaleupCol = ({
     {featurePricing.map(({ featureGroup = false, scaleup = true }, i) => (
       <PricingCell isEmpty={featureGroup} prop={scaleup} key={i + 200} DynamicTrans={DynamicTrans} />
     ))}
-    {button || <DefaultButton DynamicTrans={DynamicTrans} text="Free trial" />}
-    <PricingCell className="mb-4" prop="14 days free trial" />
+    {button || <DefaultButton DynamicTrans={DynamicTrans} text="Sign up" />}
+    {text && <PricingCell className="mb-4" prop={text} />}
   </PricingCol>
 );

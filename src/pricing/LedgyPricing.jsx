@@ -10,6 +10,7 @@ import { STARTUP, PREMIUM, ENTERPRISE } from './lib';
 export const LedgyPricing = ({
   startupButton,
   scaleupButton,
+  scaleupText = '',
   enterpriseButton,
   highlightScaleup = false,
   highlightEnterprise = false,
@@ -23,7 +24,7 @@ export const LedgyPricing = ({
       <PricingRow>
         <TextCol {...baseProps} />
         <StartupCol {...baseProps} button={startupButton} />
-        <ScaleupCol {...baseProps} button={scaleupButton} highlight={highlightScaleup} />
+        <ScaleupCol {...baseProps} button={scaleupButton} highlight={highlightScaleup} text={scaleupText} />
         <EnterpriseCol {...baseProps} button={enterpriseButton} highlight={highlightEnterprise} />
       </PricingRow>
 
@@ -34,7 +35,7 @@ export const LedgyPricing = ({
 
       <PricingRow mobileView marginBottom>
         <TextCol {...baseProps} name={PREMIUM} />
-        <ScaleupCol {...baseProps} button={scaleupButton} highlight={highlightScaleup} />
+        <ScaleupCol {...baseProps} button={scaleupButton} highlight={highlightScaleup} text={scaleupText} />
       </PricingRow>
 
       <PricingRow mobileView>
