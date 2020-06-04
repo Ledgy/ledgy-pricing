@@ -2,6 +2,7 @@ const EQUITY_PLANS = 'Pools for equity plans';
 const GRANTS = 'Option & phantom grants';
 const ANY_VESTING = 'Any vesting schedule';
 const EMPLOYEE_DASHBOARD = 'Employee dashboard';
+const EMPLOYEE_EXERCISE_REQUESTS = 'Employee exercise requests';
 const HR_INTEGRATION = 'HR system integration';
 
 const CAP_TABLE_MANAGEMENT = 'Cap table management';
@@ -34,6 +35,7 @@ export const FEATURES = Object.freeze({
   GRANTS,
   ANY_VESTING,
   EMPLOYEE_DASHBOARD,
+  EMPLOYEE_EXERCISE_REQUESTS,
   HR_INTEGRATION,
 
   // Cap table
@@ -63,7 +65,7 @@ export const FEATURES = Object.freeze({
   // Support
   SUPPORT,
   ONBOARDING_DATA_AUDIT,
-  DEDICATED_ACCOUNT
+  DEDICATED_ACCOUNT,
 });
 
 export const featurePricing = [
@@ -72,17 +74,24 @@ export const featurePricing = [
   { text: GRANTS, startup: false },
   { text: ANY_VESTING, startup: false },
   { text: EMPLOYEE_DASHBOARD, startup: false },
+  { text: EMPLOYEE_EXERCISE_REQUESTS, startup: false, scaleup: false },
   { text: HR_INTEGRATION, startup: false, scaleup: false },
 
   { text: 'Cap table', featureGroup: true },
   { text: CAP_TABLE_MANAGEMENT },
   { text: SCENARIO_MODELING },
   { text: EXIT_MODELING, startup: false },
-  { text: MULTIPLE_SCENARIOS, startup: false, scaleup: '3', enterprise: 'Unlimited' },
-  { text: HOLDING_CONFIRMATIONS, startup: 'Download only', scaleup: 'Share instantly', enterprise: 'Custom branding' },
+  {
+    text: MULTIPLE_SCENARIOS, startup: false, scaleup: '3', enterprise: 'Unlimited',
+  },
+  {
+    text: HOLDING_CONFIRMATIONS, startup: 'Download only', scaleup: 'Share instantly', enterprise: 'Custom branding',
+  },
 
   { text: 'Documents', featureGroup: true },
-  { text: DATA_ROOM, startup: '50 MB', scaleup: '500 MB', enterprise: 'Unlimited' },
+  {
+    text: DATA_ROOM, startup: '50 MB', scaleup: '500 MB', enterprise: 'Unlimited',
+  },
   { text: SES, startup: false },
   { text: QES, startup: false, scaleup: false },
   { text: TEMPLATING, startup: false, scaleup: false },
@@ -95,11 +104,15 @@ export const featurePricing = [
 
   { text: 'Access rights', featureGroup: true },
   { text: INVESTOR_PORTFOLIO },
-  { text: ADMIN_SEATS, startup: '2', scaleup: '4', enterprise: 'Unlimited' },
+  {
+    text: ADMIN_SEATS, startup: '2', scaleup: '4', enterprise: 'Unlimited',
+  },
   { text: VIEW_ONLY_SEATS, startup: false },
 
   { text: 'Support', featureGroup: true },
-  { text: SUPPORT, startup: 'Help center', scaleup: 'Chat', enterprise: 'Priority chat & phone' },
+  {
+    text: SUPPORT, startup: 'Help center', scaleup: 'Chat', enterprise: 'Priority chat & phone',
+  },
   { text: ONBOARDING_DATA_AUDIT, startup: false, scaleup: false },
   { text: DEDICATED_ACCOUNT, startup: false, scaleup: false },
 ];
